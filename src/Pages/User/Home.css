@@ -1,0 +1,66 @@
+
+.heroSection{
+    background: linear-gradient(rgba(155, 137, 137, 0.2),rgba(53, 50, 50, 0.1)),url(/public/heroImg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.heroSection h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  line-height: 1.2;
+  color: rgb(226, 43, 217);
+  /* background: linear-gradient(90deg, #8e2de2, #ff6ec4); */
+  /* -webkit-background-clip: text; */
+  /* -webkit-text-fill-color: transparent; */
+}
+
+.heroSection h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f1d1d;
+  margin-bottom: 40px;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 20px;
+}
+
+.heroSection button {
+  padding: 14px 30px;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primaryBtn {
+  background: linear-gradient(90deg, #8e2de2, #ff6ec4);
+  color: #fff;
+  border: none;
+}
+
+.primaryBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(142, 45, 226, 0.4);
+}
+
+
+.secondaryBtn {
+  background: transparent;
+  border: 2px solid #8e2de2;
+  color: #8e2de2;
+}
+
+.secondaryBtn:hover {
+  background: #8e2de2;
+  color: #fff;
+}

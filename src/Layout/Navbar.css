@@ -1,0 +1,40 @@
+.navbarSection{
+    top:0;
+    left:0;
+    background-color: rgba(5, 5, 5, 0.788);
+    height: 60px;
+    width: 100%;
+    z-index: 1999;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img{
+    width: 260px;
+    height: 60px;
+}
+
+.navbarSection ul{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    text-decoration: none;
+}
+
+.navbarSection li{
+    margin: 0 20px;
+  list-style: none;
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbarSection li a{
+  text-decoration: none;
+  color: rgb(255, 254, 254);
+  font-size: 1.04rem;
+  transition: color 0.3s ease;
+
+}

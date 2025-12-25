@@ -1,0 +1,102 @@
+{
+  "eventsData": [
+    {
+      "id": "1",
+      "title": "Summer Music Festival",
+      "description": "An unforgettable open-air music festival with international artists.",
+      "category": "Music",
+      "date": "2025-07-15",
+      "location": "Casablanca Arena",
+      "price": 250,
+      "image": "/images/events/music-festival.jpg",
+      "availableTickets": 120,
+      "featured": true,
+      "status": "active",
+      "createdAt": "2025-01-10"
+    },
+    {
+      "id": "2",
+      "title": "Modern Art Exhibition",
+      "description": "Explore contemporary art from emerging Moroccan artists.",
+      "category": "Art",
+      "date": "2025-05-22",
+      "location": "Rabat Art Gallery",
+      "price": 80,
+      "image": "/images/events/art-exhibition.jpg",
+      "availableTickets": 60,
+      "featured": true,
+      "status": "active",
+      "createdAt": "2025-02-03"
+    },
+    {
+      "id": "3",
+      "title": "International Football Match",
+      "description": "Experience the thrill of an international football showdown.",
+      "category": "Sport",
+      "date": "2025-06-01",
+      "location": "Mohammed V Stadium",
+      "price": 300,
+      "image": "/images/events/football-match.jpg",
+      "availableTickets": 200,
+      "featured": false,
+      "status": "active",
+      "createdAt": "2025-02-15"
+    },
+    {
+      "id": "4",
+      "title": "Stand-Up Comedy Night",
+      "description": "A night full of laughter with top stand-up comedians.",
+      "category": "Show",
+      "date": "2025-04-18",
+      "location": "Marrakech Theatre",
+      "price": 120,
+      "image": "/images/events/comedy-show.jpg",
+      "availableTickets": 40,
+      "featured": false,
+      "status": "active",
+      "createdAt": "2025-03-01"
+    },
+    {
+      "id": "5",
+      "title": "Tech & Innovation Conference",
+      "description": "Join industry leaders to discuss the future of technology.",
+      "category": "Conference",
+      "date": "2025-09-10",
+      "location": "Agadir Convention Center",
+      "price": 400,
+      "image": "/images/events/tech-conference.jpg",
+      "availableTickets": 150,
+      "featured": true,
+      "status": "inactive",
+      "createdAt": "2025-03-20"
+    },
+    {
+      "id": "b1c4",
+      "title": "test",
+      "description": "nvjvbvB",
+      "category": "Music",
+      "price": null,
+      "image": "",
+      "date": "2025-11-22",
+      "location": "OIEE",
+      "availableTickets": 100,
+      "featured": false,
+      "status": "active",
+      "createdAt": "2025-12-25"
+    },
+    {
+      "id": "da61",
+      "title": "new event test",
+      "description": "new event is coming today",
+      "category": "Conference",
+      "price": 9999,
+      "image": "https:/claudinary",
+      "date": "2025-12-22",
+      "location": "casa",
+      "availableTickets": 100,
+      "featured": false,
+      "status": "active",
+      "createdAt": "2025-12-25"
+    }
+  ]
+}
