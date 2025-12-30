@@ -1,0 +1,67 @@
+body{
+    margin: 0;
+    background-color: rgb(0, 0, 0);
+}
+
+.Dashboard{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content:start;
+}
+
+.sideBar{
+    background-color: rgb(15, 15, 15);
+    margin-left: 0;
+    width: 180px;
+    padding: 20px;
+    border-right: solid 1px #d56cff;
+}
+
+.sideBar h1{
+    color: antiquewhite;
+}
+
+.navLink{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.logOutDiv{
+    margin-top: 340px;
+}
+
+.content{
+    min-width: 1120px;
+    background-color: rgb(0, 0, 0);
+}
+
+.manageBtn , .orderBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: none;
+  border-radius: 12px ;
+  padding: 14px 14px;
+  color: #9b6f9b;
+  font-size: 0.85rem;
+  font-weight: 460;
+  cursor: pointer;
+  /* transition: background 0.2s ease, transform 0.1s ease; */
+}
+
+.logOutDiv{
+    justify-content: center;
+    margin-left: 5px;
+}
+.logOutBtn{
+    padding: 20 28px ;
+}
+
+.manageBtn :hover {
+  background: #8b5cf6;
+  transform: scale(1.03);
+  
+}

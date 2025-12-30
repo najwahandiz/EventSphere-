@@ -1,0 +1,49 @@
+.body{
+    background-color: rgb(53, 50, 50);
+    color: #fff;
+}
+
+.header{
+    margin-top: 12px;
+    margin-bottom: 0;
+    size: 2px;
+
+}
+
+.hrHeader{
+    margin-top: 2px;
+    margin-bottom: 46px;
+    
+}
+
+.eventsList{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    gap: 30px;
+    margin: 0px 3px;
+    background-color: rgb(0, 0, 0);
+
+}
+
+button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #bd65e0;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 14px;
+  color: #fffafa;
+  font-size: 0.85rem;
+  font-weight: 460;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+button a {
+    color: rgb(255, 250, 250);
+    text-decoration: none;
+}
+ h1{
+    color: #fff;
+}

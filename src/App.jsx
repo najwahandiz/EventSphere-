@@ -12,6 +12,7 @@ import AdminAdd from './Pages/Admin/AdminAdd'
 import Dashboard from './Pages/Admin/Dashboard'
 import Orders from './Pages/Admin/Orders'
 import ManageEvents from './Pages/Admin/ManageEvents'
+import CartEvent from './Components/Admin/CartEvent'
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
           <Route path='/Dashboard' element={<Dashboard/>}></Route>
           <Route path='/Orders' element={<Orders/>}></Route>
           <Route path='/ManageEvents' element={<ManageEvents/>}></Route>
+          <Route path='/CartEvent' element={<CartEvent/>}></Route>
         </Routes>
       </BrowserRouter>
     </div>

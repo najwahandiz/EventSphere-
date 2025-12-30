@@ -1,0 +1,119 @@
+.eventCard {
+  background: linear-gradient(180deg, #111, #0b0b0b);
+  border-radius: 18px;
+  overflow: hidden;
+  color: #fff;
+  max-width: 480px;
+  border: 1px solid rgba(166, 108, 255, 0.25);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.eventCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(166, 108, 255, 0.35);
+}
+
+/* Image */
+.imageWrapper {
+  position: relative;
+  height: 200px;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Category badge */
+.categoryBadge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #9b5cff;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Content */
+.cardContent {
+  padding: 14px;
+}
+
+.title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  margin-top: 2px;
+}
+
+.description {
+  font-size: 0.85rem;
+  color: #bbb;
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+/* Meta info */
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: #ccc;
+  margin-bottom: 16px;
+}
+
+.meta span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Footer */
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #a66cff;
+}
+
+.price small {
+  font-size: 0.7rem;
+  color: #aaa;
+}
+
+/* Button */
+.addBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #a66cff;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 14px;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.addBtn:hover {
+  background: #8b5cf6;
+  transform: scale(1.03);
+}
+
+.btnDiv{
+    display: flex;
+    justify-content: end;
+    gap: 4px;
+}

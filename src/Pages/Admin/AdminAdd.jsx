@@ -1,11 +1,11 @@
 import React , {useEffect, useState} from 'react'
 import axios from 'axios';
-import './AdminAdd.css'
+import './AdminAdd.css';
+import { getEvents, addEvent as apiAddEvent } from '../../Api/request';
 
 export default function AdminAdd() {
 
     const [Events,setEvents]=useState([]);
-    const API_URL ="https://694d3b39ad0f8c8e6e201c01.mockapi.io/api/v1/events"
 
     const [name,setName]=useState("");
     const [description,setDescription]=useState("");
@@ -18,41 +18,43 @@ export default function AdminAdd() {
     const [imageFile, setImageFile] = useState(null);
     const [uploading, setUploading] = useState(false);
     const [successMessage, setSuccessMessage] = useState("");
+    
 
-    async function fetchData() {
+    useEffect(() => {
+      async function fetchEvents() {
         try {
-            const res=await axios .get(API_URL)
-            setEvents(res.data)
+          const data = await getEvents();
+          setEvents(data);
         } catch (error) {
-            console.log("error fitching data",error)
-            
+          // Already logged in API
         }
-    }
-
-    useEffect(()=>{
-        fetchData();
-    },[])
-
-    const addEvent= async(newEvent)=>{
-      try {
-        await axios.post(API_URL, newEvent);
-        fetchData();
-        // Clear form fields
-        setName("");
-        setDescription("");
-        setCategory("Music");
-        setPrice("");
-        setImage("");
-        setDate("");
-        setLocation("");
-        setImageFile(null);
-        setSuccessMessage("Event has been added successfully!");
-        // Hide message after 2 seconds
-        setTimeout(() => setSuccessMessage(""), 2000);
-      } catch (error) {
-        console.log("error to add new event",error)
       }
-    }
+      fetchEvents();
+    }, []);
+
+
+    const addEvent = async (newEvent) => {
+        try {
+            await apiAddEvent(newEvent);
+            // Refresh events list
+            const data = await getEvents();
+            setEvents(data);
+            // Clear form fields
+            setName("");
+            setDescription("");
+            setCategory("Music");
+            setPrice("");
+            setImage("");
+            setDate("");
+            setLocation("");
+            setImageFile(null);
+            setSuccessMessage("Event has been added successfully!");
+            // Hide message after 2 seconds
+            setTimeout(() => setSuccessMessage(""), 2000);
+        } catch (error) {
+            // Already logged in API
+        }
+    };
 
     const HandelEvent= async (e)=>{
         e.preventDefault();
@@ -80,7 +82,7 @@ export default function AdminAdd() {
 
     }
 
-  const uploadImageToCloudinary = async () => {
+   const uploadImageToCloudinary = async () => {
     if (!imageFile) return null;
 
     const formData = new FormData();
