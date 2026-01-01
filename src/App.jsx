@@ -13,6 +13,8 @@ import Dashboard from './Pages/Admin/Dashboard'
 import Orders from './Pages/Admin/Orders'
 import ManageEvents from './Pages/Admin/ManageEvents'
 import CartEvent from './Components/Admin/CartEvent'
+import Panier from './Pages/User/Panier'
+
 
 
 function App() {
@@ -20,7 +22,7 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        {/* <Navbar/> */}
+        <Navbar/>
         <Footer/>
         <Routes>
           <Route path='/' element={<Home/>}></Route>
@@ -33,6 +35,7 @@ function App() {
           <Route path='/Orders' element={<Orders/>}></Route>
           <Route path='/ManageEvents' element={<ManageEvents/>}></Route>
           <Route path='/CartEvent' element={<CartEvent/>}></Route>
+          <Route path='/Panier' element={<Panier/>}></Route>
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,9 +1,13 @@
 import React , {useEffect, useState} from 'react'
 import axios from 'axios';
+import {Link} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 import './AdminAdd.css';
 import { getEvents, addEvent as apiAddEvent } from '../../Api/request';
 
 export default function AdminAdd() {
+
+  const navigate = useNavigate();
 
     const [Events,setEvents]=useState([]);
 
@@ -50,7 +54,7 @@ export default function AdminAdd() {
             setImageFile(null);
             setSuccessMessage("Event has been added successfully!");
             // Hide message after 2 seconds
-            setTimeout(() => setSuccessMessage(""), 2000);
+            setTimeout(() => setSuccessMessage(""), 5000);
         } catch (error) {
             // Already logged in API
         }
@@ -107,12 +111,16 @@ export default function AdminAdd() {
   };
 
 
+const handelNavigate = () => {
+  navigate('/Dashboard')
+}
+  
    return (
     <div className="overlay">
       <div className="modal">
         <div className="header">
           <h2>Add New Event</h2>
-          <span className="close-btn">×</span>
+          <span className="close-btn" onClick={handelNavigate}>×</span>
         </div>
         {successMessage && (
           <div className="success-message" style={{ color: 'green', marginBottom: '10px', textAlign: 'center' }}>
@@ -191,7 +199,7 @@ export default function AdminAdd() {
             />
           </div>
 
-          <button type='submit' className="button"  > Add Event</button>
+          <button type='submit' className="button" disabled={uploading} >{ uploading ? 'Adding...' : 'Add Event' } </button>
         </form>
       </div>
     </div>

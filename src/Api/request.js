@@ -15,7 +15,6 @@ export async function getEvents() {
     }
 }
 
-
 // Add a new event
 export async function addEvent(newEvent) {
     try {
@@ -26,7 +25,6 @@ export async function addEvent(newEvent) {
         throw error;
     }
 }
-
 
 //update event
 export async function updateEvent (eventToUpdate){

@@ -11,17 +11,36 @@ export default function ManageEvents() {
   const [showUpdate, setShowUpdate] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState(null);
 
+  const [loading, setLoading] = useState(false);
+
   const [showDelete, setShowDelete]=useState(false);
   const [deletedEvent, setDeletedEvent]=useState(null);
+
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const getCategories = () => {
+    const allCategories = events.map(event => event.category);
+    return ['All', ...new Set(allCategories)].filter(Boolean);
+  };
+
+   const getFilteredEvents = () => {
+    if (selectedCategory === 'All') return events;
+    return events.filter(event => event.category === selectedCategory);
+  };
+
 
   useEffect(() => {
     async function fetchEvents() {
       try {
+        setLoading(true);
         const data = await getEvents();
         setEvents(data);
       } catch (error) {}
+      finally {
+        setLoading(false);
+      }
     }
     fetchEvents();
+    
   }, []);
 
   const handleEdit = (event) => {
@@ -51,6 +70,8 @@ export default function ManageEvents() {
     }
   }
 
+  const categories = getCategories();
+  const filteredEvents = getFilteredEvents();
 
 
   return (
@@ -63,12 +84,29 @@ export default function ManageEvents() {
         <hr className='hrHeader' />
       </div>
 
-      <div className='eventsList'>
-        {events.map(event => (
-          <CartEvent key={event.id} event={event} onEdit={handleEdit} onDelete={handelDelete} />
-        ))}
-      </div>
+      {loading ? (
+        <div className="loading-message">Rechargement en cours...</div>
+      ) : (
+        <>
+        <div className='catalogueBtnDiv'>
+          {categories.map((cat,index)=>(
+            <button className='catBtn' key={index} onClick={()=>{setSelectedCategory(cat)}}>{cat}</button>
+          ) )}
+        </div>
 
+        <div className='eventsList'>
+            {filteredEvents.length > 0 ? (
+            filteredEvents.map(event => (
+              <CartEvent key={event.id} event={event} onEdit={handleEdit} onDelete={handelDelete} />
+            ))
+            ) : (
+              <p>No events found in this category.</p>
+            )
+            }
+        </div>
+          </>
+      )}
+        
       {showUpdate && selectedEvent && (
         <UpdatePopUp event={selectedEvent} onClose={handleClose}  />
       )}
@@ -77,6 +115,9 @@ export default function ManageEvents() {
         <DeletePopUp deletedEvent={deletedEvent} closeDeletePopup={closeDeletePopup} />
       )}
     </div>
+
+    
+
   );
 }
 

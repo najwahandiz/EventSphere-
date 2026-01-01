@@ -2,7 +2,7 @@
 .overlay {
   position: fixed;
   inset:0px;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(32, 32, 32, 0.856);
   display: flex;
   align-items: center;
   justify-content: center;

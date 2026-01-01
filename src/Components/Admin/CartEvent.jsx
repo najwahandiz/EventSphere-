@@ -19,7 +19,7 @@ export default function CartEvent({event, onEdit, onDelete}) {
       
       <div className="cardContent">
         <h3 className="title">{event.title}</h3>
-        {/* <p className="description">{event.description}</p> */}
+        <p className="description">{event.description}</p>
 
         <div className="meta">
           <span>
@@ -32,10 +32,12 @@ export default function CartEvent({event, onEdit, onDelete}) {
 
         <div className="cardFooter">
           <span className="price">${event.price} <small>/ ticket</small></span>
+
           <div className='btnDiv'>
             <button className="addBtn" onClick={() => onEdit(event)}><Pencil size={16} /> </button>
             <button className="addBtn" onClick={() => onDelete(event)}><Trash2 size={16} /> </button>
           </div>
+          
         </div>
       </div>
 
