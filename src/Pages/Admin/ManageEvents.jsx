@@ -6,6 +6,7 @@ import {getEvents as apiAddEvent, getEvents} from '../../Api/request';
 import { Link } from 'react-router-dom';
 import './ManageEvents.css'
 
+
 export default function ManageEvents() {
   const [events, setEvents] = useState([]);
   const [showUpdate, setShowUpdate] = useState(false);

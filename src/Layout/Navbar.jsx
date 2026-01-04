@@ -25,8 +25,7 @@ export default function Navbar() {
 
         <nav className='iconesNavigation'>
             <ul>
-                {/* <li><Link to='/Checkout'>checkout</Link></li> */}
-                <li><Link to='/AdminLogin'>Admin</Link></li>
+                
                 <li style={{ position: 'relative' }}>
                     <Link to='/Panier'>
                         <BsCart size={20}/> 
@@ -45,6 +44,7 @@ export default function Navbar() {
                         )}
                     </Link>
                 </li>
+                <li><Link to='/AdminLogin'>Admin</Link></li>
             </ul>
 
         </nav>

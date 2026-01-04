@@ -1,0 +1,130 @@
+ h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  margin-top: 120px;
+  text-align: left;
+  padding-left: 190px;
+  color: #fff;
+}
+
+/* .backBtn{
+	margin-left: 190px;
+	margin-top: 20px;
+	background-color: #000000;
+	color: #9b6cff;
+	padding: 10px 20px;
+	border-radius: 12px;
+	border: none;
+	cursor: pointer;
+}
+
+.backBtn a{
+	color: #9b6cff;
+	font-size: 17px;
+} */
+
+/* ===== Form Container ===== */
+.formDiv {
+  width: 410px;
+  height: 100%;
+  background: #141414;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+/* Section Title */
+.formDiv h3 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* ===== Form ===== */
+.formDiv form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ===== Input Group ===== */
+.fromGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.fromGroup label {
+  font-size: 0.85rem;
+  color: #bdbdbd;
+}
+
+/* Inputs */
+.fromGroup input {
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: #161616;
+  border: 1px solid #2b2b2b;
+  color: #fff;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.fromGroup input::placeholder {
+  color: #777;
+}
+
+.fromGroup input:focus {
+  border-color: #9b6cff;
+}
+
+/* ===== Button ===== */
+.formDiv button {
+  margin-top: 10px;
+  padding: 14px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #9b6cff, #7b4cff);
+  color: #161616;
+  text-align: center;
+  justify-items: center;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.formDiv button:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+.formDiv button:active {
+  transform: scale(0.98);
+}
+
+.error {
+  color: #ff4d4f;
+  font-size: 0.8rem;
+  margin-top: 4px;
+  padding: 0;
+}
+
+.succes{
+  color: #62ff4d;
+  font-size: 0.8rem;
+  margin-top: 4px;
+  padding: 0;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .formDiv {
+    width: 100%;
+    padding: 22px;
+  }
+
+  .checkoutPage h1 {
+    font-size: 1.8rem;
+  }
+}

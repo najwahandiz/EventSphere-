@@ -3,23 +3,29 @@ body{
     background-color: rgb(0, 0, 0);
 }
 
+
 .Dashboard{
     display: flex;
-    flex-direction: row;
-    gap: 50px;
-    justify-content:start;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .sideBar{
-    background-color: rgb(15, 15, 15);
-    margin-left: 0;
     width: 180px;
     padding: 20px;
-    border-right: solid 1px #ede8f0;
+    background-color: rgb(15, 15, 15);
+    border-right: 1px solid #ede8f0;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
 }
 
 .sideBar h1{
     color: antiquewhite;
+    text-align: left;
+    margin-top: 0;
+    padding-left: 2px;
 }
 
 .navLink{
@@ -33,10 +39,10 @@ body{
 }
 
 .content{
-    min-width: 1120px;
-    background-color: rgb(0, 0, 0);
-    margin-right: 15px;
-    margin-bottom: 15px;
+    flex: 1;
+  min-width: 0;   /* VERY IMPORTANT for flex overflow */
+  padding: 20px;
+
 }
 
 .manageBtn , .orderBtn {
@@ -62,8 +68,8 @@ body{
     padding: 20 28px ;
 }
 
-.manageBtn :hover {
+.manageBtn:hover,
+.orderBtn:hover {
   background: #8b5cf6;
   transform: scale(1.03);
-  
 }

@@ -10,8 +10,7 @@ import {LogOut, LayoutGrid, ShoppingBag } from "lucide-react"
 export default function Dashboard() {
 
   const [selectedPage,setSelectedpage]= useState("ManageEvents")
-  const [openUpdatePopUp,setOpenUpdatePopUp]=useState(false);
-
+  const [openUpdatePopUp,setOpenUpdatePopUp] = useState(false);
 
 
   return (
@@ -29,9 +28,9 @@ export default function Dashboard() {
         </section>  
 
 
-        <section className='content'>
-          {selectedPage=="ManageEvents" ? <ManageEvents size={2000} /> : <Orders />}
-        </section>
+        <div className='content'>
+          {selectedPage=="ManageEvents" ? <ManageEvents  /> : <Orders />}
+        </div>
                   
                 
            

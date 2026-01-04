@@ -29,13 +29,17 @@ export default function Events() {
   },[]);
 
 
-  const categories = ['All',... new Set(events.map(event=>event.category))]
+  const categories = ['All', ...new Set(events
+    .map(event => event?.category)
+    .filter(category => category) // Remove any falsy values (undefined, null, empty string)
+  )]
 
   const filteredEvents = events.filter(evnt=>{
     const matchesCategory = categoryFilter === 'All' || evnt.category === categoryFilter;
 
-    const matchSearsh = evnt.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
-        evnt.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchSearsh = 
+        (evnt.title && evnt.title.toLowerCase().includes(searchTerm.toLowerCase())) || 
+        (evnt.description && evnt.description.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchSearsh;    
   })
 
@@ -63,7 +67,7 @@ export default function Events() {
         <div className="category-filter" >
           <select value={categoryFilter} onChange={(e)=>setCategoryFilter(e.target.value)}>
             {categories.map((cat)=>(
-              <option key={cat} value={cat} >{cat.charAt(0).toUpperCase() + cat.slice(1)}</option>
+              <option key={cat} value={cat}>{cat ? `${cat.charAt(0).toUpperCase()}${cat.slice(1)}` : 'Uncategorized'}</option>
             ))}
           </select>
         </div>
