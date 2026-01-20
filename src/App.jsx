@@ -5,11 +5,13 @@ import Events from './Pages/User/Events'
 import Checkout from './Pages/User/Checkout'
 import Contact from './Pages/User/Contact'
 import Panier from './Pages/User/Panier'
+
 import Userlayout from './Layout/UserLayout'
+import AdminRoutes from './Layout/AdminRoutes'
 
 import AdminLogin from './Pages/Admin/AdminLogin'
 import AdminAdd from './Pages/Admin/AdminAdd'
-import Dashboard from './Pages/Admin/Dashboard'
+
 import Orders from './Pages/Admin/Orders'
 import ManageEvents from './Pages/Admin/ManageEvents'
 import CartEvent from './Components/Admin/CartEvent'
@@ -35,12 +37,13 @@ function App() {
           </Route>
 
           {/* Admin ROUTES */}
-          <Route path='/AdminLogin' element={<AdminLogin/>}></Route>
-          <Route path='/AdminAdd' element={<AdminAdd/>}></Route>
-          <Route path='/Dashboard' element={<Dashboard/>}></Route>
-          <Route path='/Orders' element={<Orders/>}></Route>
-          <Route path='/ManageEvents' element={<ManageEvents/>}></Route>
-          <Route path='/CartEvent' element={<CartEvent/>}></Route>
+          <Route element={<AdminRoutes />}>
+            <Route path='/AdminLogin' element={<AdminLogin/>}></Route>
+            <Route path='/AdminAdd' element={<AdminAdd/>}></Route>
+            <Route path='/Orders' element={<Orders/>}></Route>
+            <Route path='/ManageEvents' element={<ManageEvents/>}></Route>
+            <Route path='/CartEvent' element={<CartEvent/>}></Route>
+          </Route>
           
         </Routes>
       </BrowserRouter>

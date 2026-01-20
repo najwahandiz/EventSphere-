@@ -132,7 +132,7 @@ export default function Checkout() {
 
   return (
     <div className='checkoutPage'>
-      <h1>Checkout</h1>
+      <h1 >Checkout</h1>
       <button className='backBtn'><Link to='/Panier'>←-- Back to Cart</Link></button>
 
       <div className='checkoutContainer'>

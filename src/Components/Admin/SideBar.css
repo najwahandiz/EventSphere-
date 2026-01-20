@@ -1,0 +1,116 @@
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  background-color: #0A0A0A;
+  border-right: 1px solid #1A1A1A;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+  color: #FFFFFF;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+}
+
+/* --- Section Profil --- */
+.sidebar-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  padding-left: 8px;
+}
+
+.profile-avatar {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #9b6cff 0%, #7c4dff 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 18px;
+  box-shadow: 0 4px 12px rgba(155, 108, 255, 0.2);
+}
+
+.profile-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  
+}
+
+/* --- Navigation --- */
+.sidebar-nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar-nav a {
+  text-decoration: none;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  color: #888;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  border: 1px solid transparent;
+}
+
+.nav-item:hover {
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.08);
+  transform: translateX(4px);
+}
+
+/* --- État Actif (Events) --- */
+.nav-item.active {
+  background-color: rgba(155, 108, 255, 0.1);
+  color: #9b6cff;
+  border-color: rgba(155, 108, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(155, 108, 255, 0.1);
+}
+
+/* --- Footer / Logout --- */
+.sidebar-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 20px;
+}
+
+.nav-item.logout {
+  color: #888;
+  margin-top: 8px;
+  margin-bottom: 38px;
+}
+
+.nav-item.logout:hover {
+  color: #ff6b6b;
+  background: rgba(255, 107, 107, 0.05);
+  border-color: rgba(255, 107, 107, 0.1);
+}
+
+.nav-item span {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Icon styling */
+.nav-item svg {
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover svg {
+  transform: scale(1.1);
+}

@@ -21,7 +21,7 @@ export default function AdminLogin() {
     e.preventDefault();
 
     if(formData.username==="admin" && formData.password==="admin123"){
-      navigate('/Dashboard')
+      navigate('/ManageEvents')
     }else{
         setError("password ou email invalide");
     }
