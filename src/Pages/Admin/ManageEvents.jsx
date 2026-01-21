@@ -4,7 +4,7 @@ import UpdatePopUp from '../../Components/PopUp/UpdatePopUp'
 import DeletePopUp from '../../Components/PopUp/DeletePopUp';
 import { getEvents } from '../../Api/request';
 import { Link } from 'react-router-dom';
-import './ManageEvents.css'
+import './ManageEvents.css';
 
 export default function ManageEvents() {
   const [events, setEvents] = useState([]);

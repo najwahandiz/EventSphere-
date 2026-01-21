@@ -67,8 +67,8 @@ export default function AdminLogin() {
             </div>
           </div>
 
-          <button type="submit" className="loginBtn" >Sign In
-            {/* <Link className="loginLink" to='/Dashboard'>Sign In</Link> */}
+          <button type="submit" className="loginBtn" >
+            <Link className="loginLink" to='/ManageEvents'>Sign In</Link>
           </button>
           {error && <p className="error">{error}</p>}
         </form>

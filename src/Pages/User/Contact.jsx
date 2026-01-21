@@ -20,6 +20,7 @@ export default function Contact() {
     setErrors({ ...errors, [name]: "" });
   };
 
+
   const handelSubmit = (e) => {
     e.preventDefault();
     let newErrors = {};

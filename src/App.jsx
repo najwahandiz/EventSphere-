@@ -38,12 +38,13 @@ function App() {
 
           {/* Admin ROUTES */}
           <Route element={<AdminRoutes />}>
-            <Route path='/AdminLogin' element={<AdminLogin/>}></Route>
             <Route path='/AdminAdd' element={<AdminAdd/>}></Route>
             <Route path='/Orders' element={<Orders/>}></Route>
             <Route path='/ManageEvents' element={<ManageEvents/>}></Route>
             <Route path='/CartEvent' element={<CartEvent/>}></Route>
           </Route>
+          <Route path='/AdminLogin' element={<AdminLogin/>}></Route>
+
           
         </Routes>
       </BrowserRouter>

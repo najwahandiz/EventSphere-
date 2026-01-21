@@ -35,8 +35,10 @@ export default function SideBar() {
       {/* Logout at Bottom */}
       <div className="sidebar-footer">
         <div className="nav-item logout">
-          <LogOut size={20} />
-          <span>Logout</span>
+          <Link className={`nav-item ${isActive('/Orders') ? 'active' : ''}`} to="/"> 
+            <LogOut size={20} />
+            <span>Logout</span>
+          </Link>
         </div>
       </div>
     </div>
